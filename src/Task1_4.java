@@ -2,7 +2,7 @@ public class Task1_4 {
     public static void main(String[] args) {
         int[][] a = {
                 {1, 1},
-                {2, -3}
+                {0, -3}
         };
         int n = 0;
         int p = 0;
@@ -18,7 +18,7 @@ public class Task1_4 {
         }
         if (p > n) {
             System.out.println("В массиве больше положительных чисел");
-        } else if (n < p) {
+        } else if (n > p) {
             System.out.println("В массиве больше отрицательных чисел");
         } else {
             System.out.println("В массиве одинаковое количество положительных и отрицательных чисел");
