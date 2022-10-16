@@ -1,3 +1,5 @@
+package HW_1;
+
 public class Task1_5 {
     public static void main(String[] args) {
         int[][] a = {

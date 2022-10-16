@@ -1,3 +1,5 @@
+package HW2;
+
 public enum Months {
     JANUARY(1),
     FEBRUARY(2),

@@ -1,3 +1,5 @@
+package HW2;
+
 public class Box {
     private final int lenght;
     private final int width;

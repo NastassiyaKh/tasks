@@ -1,3 +1,5 @@
+package HW_1;
+
 public class Task1_7 {
     public static void main(String[] args) {
         int[] a = {1, 0, 4, 8, 9, 1};
