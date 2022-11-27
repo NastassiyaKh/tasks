@@ -1,16 +1,12 @@
 package HW6;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 import java.util.Stack;
 
 public class Factory {
     private final Random RANDOM = new Random();
-//    public final Map<Factory.Parts, Integer> STORAGE = new HashMap<>();
-
-    public Stack<Parts> stack = new Stack<>();
     private final Parts[] PARTS = Parts.values();
+    public Stack<Parts> stack = new Stack<>();
 
     protected enum Parts {
         LEFT_HAND,

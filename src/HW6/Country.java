@@ -4,24 +4,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Country {
+    private static final int NUMBER_OF_ROBOTS = 5;
     private final Map<Factory.Parts, Integer> COUNTRY_DETAILS = new HashMap<>();
     private Factory factory;
-    private static final int NUMBER_OF_ROBOTS = 5;
 
     public Country(Factory factory) {
         this.factory = factory;
     }
 
     public void createArmyOfRobots() {
-
         while (true) {
             synchronized (factory.stack) {
                 if (factory.stack.isEmpty()) {
                     try {
                         factory.stack.wait();
-                        continue;
-                    } catch (InterruptedException e) {
-                    }
+                    } catch (InterruptedException e) {}
                 }
 
                 Factory.Parts part = factory.stack.peek();

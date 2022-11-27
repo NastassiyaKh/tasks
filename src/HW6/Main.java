@@ -1,8 +1,5 @@
 package HW6;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Main {
     public static void main(String[] args) {
         Factory factory = new Factory();
@@ -13,11 +10,16 @@ public class Main {
         Thread countryThread1 = new Thread(country1::createArmyOfRobots);
         Thread countryThread2 = new Thread(country2::createArmyOfRobots);
 
-
         factoryThread.setDaemon(true);
         factoryThread.start();
         countryThread1.start();
         countryThread2.start();
 
+        try {
+            countryThread1.join();
+            countryThread2.join();
+                } catch (InterruptedException e) {
+            System.out.println("прервано");
+        }
     }
 }
